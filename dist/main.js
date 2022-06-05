@@ -1,2 +1,2 @@
-(()=>{"use strict";!function(){const t=document.getElementById("content"),e=t.createElement("p");e.textContent="Fcuk",t.appendChild(e)}()})();
+(()=>{"use strict";document.getElementById("content").textContent="Shoot me"})();
 //# sourceMappingURL=main.js.map
