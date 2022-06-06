@@ -1,0 +1,1 @@
+import createThing from "./../index.js"
