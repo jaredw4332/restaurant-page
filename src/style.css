@@ -1,0 +1,115 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* PAGE STYLING BEGINS */
+
+/* MULTIPLE AREA STYLE */
+
+:root {
+	--brown: rgba(160, 62, 10, 0.7);
+	--yellow: rgb(248, 226, 103);
+	--silver: rgb(232, 242, 255);
+	--logofont: "logofont", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	--lowerfont: "lowerfont", Georgia, 'Times New Roman', Times, serif;
+}
+
+@font-face {
+	font-family: "logofont";
+	src: url("media/Shrikhand-Regular.ttf");
+}
+
+@font-face {
+	font-family: "lowerfont";
+	src: url("media/KaushanScript-Regular.ttf");
+}
+
+#content {
+	background-image: url("media/tablefood.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.restaurantNameContainer {
+	font-family: var(--logofont);
+	line-height: 150%;
+}
+
+.restaurantNameTop {
+	color: var(--yellow);
+	font-size: 32px;
+}
+
+.restaurantNameBottom {
+	color: var(--silver);
+	font-family: var(--lowerfont);
+	font-size: 30px;
+	text-align: end;
+}
+
+/* SIDEBAR STYLE */
+
+#sidebarContainer {
+	height: 100vh;
+	background-color: var(--brown);
+}
+
+/* HOME STYLE */
+
+#homeContainer {
+	background-color: var(--brown);
+	justify-self: center;
+	align-self: center;
+	height: 40vh;
+	padding: 20px;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+}
