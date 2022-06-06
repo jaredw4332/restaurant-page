@@ -1,11 +1,15 @@
-import buildHeader from "./modules/header.js"
+import './style.css'
+import buildSidebar from "./modules/sidebar.js"
+import buildHome from "./modules/home.js"
 
-export default function createThing (name, type, text, group) {
+export default function createThing (name, type, text, group, parent) {
+    let id = name
     name = document.createElement(type)
-    name.setAttribute("id", name)
+    name.setAttribute("id", id)
     if (text != 0) { name.textContent = text }
     if (group != 0) { name.classList.add(group) }
-    content.appendChild(name)
+    parent.appendChild(name)
 }
 
-buildHeader()
+buildSidebar()
+buildHome()
