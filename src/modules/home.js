@@ -13,13 +13,18 @@ export default function buildHome() {
     restaurantNameContainer.setAttribute("id", "restaurantNameContainerHome")
     homeContainer.appendChild(restaurantNameContainer)
 
-    const restaurantNameTop = createThing("restaurantNameSidebarTop", "h1", "Mmm Borgor", "restaurantNameTop", restaurantNameContainer)
-    const restaurantNameBottom = createThing("restaurantNameSidebarBottom", "h1", "Classic Eatery", "restaurantNameBottom", restaurantNameContainer)
+    const restaurantNameTop = createThing("restaurantNameHomeTop", "h1", "Mmm Borgor", "restaurantNameTop", restaurantNameContainer)
+    const restaurantNameBottom = createThing("restaurantNameHomeBottom", "h1", "Classic Eatery", "restaurantNameBottom", restaurantNameContainer)
 
-    const slogan = createThing("slogan", "p", "You're already full", 0, homeContainer)
+    const descriptionContainer = document.createElement('div')
+    descriptionContainer.setAttribute('id', "descriptionContainer")
+    homeContainer.appendChild(descriptionContainer)
+
+    const descriptionTop = createThing("descriptionTop", "p", "Experience the unmatched flavour that the Mmm Borgor Classic Eatery has been providing since 1982, all in the heart of beautiful downtown Fakecity.", "description", descriptionContainer)
+    const descriptionBottom = createThing("descriptionBottom", "p", "Dine in, pick up, or we can deliver!", "description", descriptionContainer)
 
     const buttonContainer = document.createElement('div')
-    buttonContainer.setAttribute("id", "homeButtonContainer")
+    buttonContainer.setAttribute("id", "orderButtonContainer")
     homeContainer.appendChild(buttonContainer)
 
     const pickupButton = createThing("pickupButton", "button", "Order Pickup", "orderButtons", buttonContainer)
