@@ -120,7 +120,7 @@ button {
 	width: fit-content;
 	align-self: end;
 	margin-left: 20vw;
-	line-height: 170%;
+	line-height: 172%;
 }
 
 #restaurantNameHeaderTop {
@@ -133,22 +133,31 @@ button {
 
 #navButtonContainer {
 	grid-row: 2 / 3;
+	width: 30%;
+	display: flex;
 	justify-self: end;
+	justify-content: space-evenly;
 	margin-right: 20vw;
 }
 
 .navButtons {
 	color: var(--silver);
 	background-color: transparent;
+	transition: 0.1s;
 	border-style: none;
-	transition: 1s;
+	padding-bottom: 10px;
 }
 
 .navButtons:hover {
-	text-decoration: underline var(--silver);
+	border-bottom: 2px solid var(--silver);
 }
 
-.navButtons:active {
+.navButtons:active, .navButtons:disabled:hover {
+	color: var(--yellow);
+	border-bottom: 2px solid var(--yellow);
+}
+
+.navButtons:disabled {
 	color: var(--yellow);
 }
 
@@ -212,4 +221,10 @@ button {
 
 .orderButtons:hover {
 	background-color: var(--silver);
+}
+
+.orderButtons:active {
+	color: var(--silver);
+	border-color: var(--silver);
+	background-color: var(--teal);
 }
