@@ -93,7 +93,7 @@ button {
 	height: 100%;
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: minmax(1fr, 180px) 5fr;
+	grid-template-rows: 150px;
 	font-family: var(--basicfont);
 }
 
@@ -171,11 +171,11 @@ button {
 	justify-self: center;
 	align-self: center;
 	height: fit-content;
-	width: 50vw;
+	width: 40vw;
 	min-width: fit-content;
-	padding: 3vh;
+	padding: 20px;
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: 1fr 2fr 1fr;
 	border: var(--fullborder);
 	gap: 20px;
 }
@@ -194,11 +194,14 @@ button {
 }
 
 #descriptionContainer {
+	max-width: 40vw;
 	color: var(--silver);
 	font-size: 22px;
 	display: grid;
 	text-align: center;
-	gap: 10px;
+	justify-self: center;
+	align-content: center;
+	gap: 20px;
 }
 
 #orderButtonContainer {
