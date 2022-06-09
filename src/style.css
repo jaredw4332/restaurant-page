@@ -89,9 +89,11 @@ button {
 	background-image: url("media/tablefood.jpg");
 	background-size: cover;
 	background-position: center;
-	height: 100vh;
+	background-attachment: scroll;
+	height: 100%;
+	min-height: 100vh;
 	display: grid;
-	grid-template-rows: 1fr 5fr;
+	grid-template-rows: minmax(1fr, 180px) 5fr;
 	font-family: var(--basicfont);
 }
 
@@ -109,7 +111,6 @@ button {
 /* HEADER STYLE */
 
 #headerContainer {
-	width: 100vw;
 	background-color: var(--background);
 	display: grid;
 	grid-template-rows: 1fr 1fr;
@@ -118,6 +119,7 @@ button {
 }
 
 #restaurantNameContainerHeader {
+	padding-top: 10px;
 	width: fit-content;
 	align-self: end;
 	margin-left: 20vw;
@@ -249,7 +251,7 @@ button {
 	background-color: var(--background);
 	border: var(--fullborder);
 	min-width: fit-content;
-	max-height: 400px;
+	height: 380px;
 	overflow: hidden;
 }
 
@@ -265,13 +267,14 @@ button {
 .menuImg {
 	width: 200px;
 	height: 200px;
+	max-height: 360px;
+	max-width: 360px;
 	border: var(--fullborder);
 	transition: 0.5s;
 }
 
 .menuImg:hover {
 	position: relative;
-	width: 90%;
 	height: 90%;
-
+	width: 90%;
 }
