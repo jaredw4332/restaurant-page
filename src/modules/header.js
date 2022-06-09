@@ -1,6 +1,4 @@
 import createThing from "./../index.js"
-import exportHome from "./home.js"
-import exportMenu from "./menu.js"
 
 export default function buildHeader() {
 
