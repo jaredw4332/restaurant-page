@@ -243,7 +243,7 @@ button {
 
 .menuItem {
 	display: grid;
-	grid-template-rows: 4fr 1fr 2fr;
+	grid-template-rows: 4fr repeat(3, 1fr);
 	justify-items: center;
 	align-items: center;
 	text-align: center;
@@ -262,6 +262,11 @@ button {
 
 .menuItemDesc {
 	font-size: 19px;
+}
+
+.menuItemPrice {
+	font-size: 22px;
+	color: var(--yellow);
 }
 
 .menuImg {
