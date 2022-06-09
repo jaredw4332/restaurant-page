@@ -6,13 +6,19 @@ export default function buildMenu() {
     menuContainer.setAttribute("id", "menuContainer")
     content.appendChild(menuContainer)
 
-    buildMenuItem("Everything Bowl", "Not sure what to get? Get the Everything Bowl! It has everything you could ever want, and more!", "foodmixbowl.jpg", "A bowl of various meats and vegetables")
-    buildMenuItem("Green Eggs on Toast", "Delicious avocado spread on your bread of choice, toasted and topped by a sunny side up egg.", "eggtoast.jpg", "Toast with avocado spread and a fried egg on top")
-    buildMenuItem("Springfield Steamed Ham", "With bacon and lettuce prepared under the rare midwestern northern lights, this sandwich is sure to please.", "burger.jpg", "A burger")
-    buildMenuItem("Reggie's Pizza", "Guy named Reggie walks into a restaurant. Offers to make pizza. We let him. It's delicious. We hire him full time.", "pizza.jpg", "A pizza topped with various vegetables")
+    buildMenuItem("Everything Bowl", "Not sure what to get? Get the Everything Bowl! It has everything you could ever want, and more!", "foodmixbowl.jpg", "A bowl of various meats and vegetables", "20.55")
+    buildMenuItem("Green Eggs on Toast", "Delicious avocado spread on your bread of choice, toasted and topped by a sunny side up egg.", "eggtoast.jpg", "Toast with avocado spread and a fried egg on top", "9.35")
+    buildMenuItem("Springfield Steamed Ham", "With bacon and lettuce prepared under the rare midwestern northern lights, this sandwich is sure to please.", "burger.jpg", "A burger", "14.50")
+    buildMenuItem("Reggie's Pizza", "Guy named Reggie walks into a restaurant. Offers to make pizza. We let him. It's delicious. We hire him full time.", "pizza.jpg", "A pizza topped with various vegetables", "15.75")
+    buildMenuItem("Reckless Salad", "This salad is for the eccentric, the dangerous, the absolutely pants on head lunatics of our world.", "salad.jpg", "Salad", "12.60")
+    buildMenuItem("Golfer's Stew", "I'm not 100% sure what's in this but I'd say it looks pretty good, although I'm not even sure it's stew. Why not give it a try?", "stew.jpg", "Some kind of meat and vegetable stew", "19.00")
+    buildMenuItem("Squid's Delight", "This dish is a delight for you, and the squid! You get to enjoy the squid's delicious tentacle, and the squid will never know pain or suffering ever again.", "tentacle.jpg", "Squid tentacle", "25.20")
+    buildMenuItem("Broccoli Pasta", "Broccoli, bread, and pasta. Just imagine that. Broccoli, bread, and pasta! Crazy. That's just crazy.", "pasta.jpg", "Pasta with broccoli and bread", "10.00")
+    buildMenuItem("Bell Pepper", "Just a red bell pepper, ideally for all you red bell pepper lovers out there, but anyone can order it.", "pepper.jpg", "Red bell pepper", "1.56")
+    buildMenuItem("Artisan Chicken Roast", "The highest quality meat from the highest quality farm. However, we're still working on the roasted part.", "chicken.jpg", "A live chicken", "45.99")
 }
 
-function buildMenuItem(name, description, imgname, imgdesc) {
+function buildMenuItem(name, description, imgname, imgdesc, price) {
 
     let menuItem = document.createElement('div')
     menuItem.classList.add("menuItem")
@@ -33,4 +39,9 @@ function buildMenuItem(name, description, imgname, imgdesc) {
     menuItemDesc.textContent = description
     menuItemDesc.classList.add("menuItemDesc")
     menuItem.appendChild(menuItemDesc)
+
+    let menuItemPrice = document.createElement('p')
+    menuItemPrice.textContent = price
+    menuItemPrice.classList.add("menuItemPrice")
+    menuItem.appendChild(menuItemPrice)
 }
