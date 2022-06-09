@@ -1,5 +1,6 @@
 import createThing from "./../index.js"
-import buildHome from "./home.js"
+import exportHome from "./home.js"
+import exportMenu from "./menu.js"
 
 export default function buildHeader() {
 
@@ -22,7 +23,6 @@ export default function buildHeader() {
     headerContainer.appendChild(buttonContainer)
     
     const homeButton = createThing("homeButton", "button", "Home", "navButtons", buttonContainer)
-    document.getElementById("homeButton").addEventListener("click", buildHome)
     const menuButton = createThing("menuButton", "button", "Menu", "navButtons", buttonContainer)
     const aboutButton = createThing("aboutButton", "button", "About", "navButtons", buttonContainer)
 }
