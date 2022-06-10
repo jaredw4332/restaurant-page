@@ -286,3 +286,44 @@ button {
 	height: 90%;
 	width: 90%;
 }
+
+/* ABOUT STYLE */
+
+#aboutContainer {
+	background-color: var(--background);
+	color: var(--silver);
+	border: var(--fullborder);
+	justify-self: center;
+	align-self: center;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	width: 70vw;
+	max-width: 900px;
+}
+
+.aboutHeader {
+	color: var(--yellow);
+	font-family: var(--lowerfont);
+	font-size: 30px;
+	padding: 10px;
+}
+
+.aboutBio {
+	font-size: 22px;
+}
+
+.aboutHours {
+	font-size: 20px;
+	line-height: 200%;
+}
+
+#aboutBioContainer {
+	grid-area: 1 / 1 / 2 / 3;
+	text-align: center;
+}
+
+#aboutHoursContainer {
+	grid-area: 2 / 2 / 3 / 3;
+	justify-self: center;
+}
