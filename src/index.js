@@ -77,6 +77,6 @@ const page = (() => {
     buildHeader()
     buildHome()
     addButtonEvents()
-
+    homeButton.disabled = true
 
 })()
