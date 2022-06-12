@@ -1,4 +1,5 @@
 import createThing from "./../index.js"
+import burgerIcon from "../media/burgericon.svg"
 
 export default function buildHeader() {
 
@@ -23,4 +24,11 @@ export default function buildHeader() {
     const homeButton = createThing("homeButton", "button", "Home", "navButtons", buttonContainer)
     const menuButton = createThing("menuButton", "button", "Menu", "navButtons", buttonContainer)
     const aboutButton = createThing("aboutButton", "button", "About", "navButtons", buttonContainer)
+
+    const headTitle = document.querySelector('head');
+    const icon = document.createElement('link');
+    icon.setAttribute('rel','shortcut icon');
+    icon.setAttribute('href',burgerIcon);
+    headTitle.appendChild(icon);
 }
+

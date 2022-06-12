@@ -1,4 +1,7 @@
 import createThing from "./../index.js"
+import phone from "../media/phone.svg"
+import location from "../media/location.svg"
+import mail from "../media/mail.svg"
 
 export default function buildAbout() {
     const content = document.getElementById("content")
@@ -40,7 +43,7 @@ export default function buildAbout() {
     const aboutContactLocationImg = document.createElement('img')
     aboutContactLocationImg.classList.add("contactIcon")
     aboutContactLocationImg.setAttribute("id", "locationImg")
-    aboutContactLocationImg.src = "../src/media/location.svg"
+    aboutContactLocationImg.src = location
     aboutContactLocationImg.alt = "Location marker"
     aboutContactLocationContainer.appendChild(aboutContactLocationImg)
     
@@ -52,7 +55,7 @@ export default function buildAbout() {
 
     const aboutContactPhoneImg = document.createElement('img')
     aboutContactPhoneImg.classList.add("contactIcon")
-    aboutContactPhoneImg.src = "../src/media/phone.svg"
+    aboutContactPhoneImg.src = phone
     aboutContactPhoneImg.alt = "Telephone"
     aboutContactPhoneContainer.appendChild(aboutContactPhoneImg)
 
@@ -64,7 +67,7 @@ export default function buildAbout() {
 
     const aboutContactEmailImg = document.createElement('img')
     aboutContactEmailImg.classList.add("contactIcon")
-    aboutContactEmailImg.src = "../src/media/mail.svg"
+    aboutContactEmailImg.src = mail
     aboutContactEmailImg.alt = "Letter"
     aboutContactEmailContainer.appendChild(aboutContactEmailImg)
     
