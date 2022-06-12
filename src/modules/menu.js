@@ -36,7 +36,7 @@ function buildMenuItem(name, description, imgname, imgdesc, price) {
     menuContainer.appendChild(menuItem)
 
     let menuImg = document.createElement('img')
-    menuImg.src = `../src/media/${imgname}`
+    menuImg.src = imgname
     menuImg.alt = imgdesc
     menuImg.classList.add("menuImg")
     menuItem.appendChild(menuImg)
